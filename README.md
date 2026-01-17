@@ -181,23 +181,30 @@ locals {
   pod_cidr_range         = "10.10.0.0/16"
   service_cidr_range     = "10.20.0.0/20"
   node_count             = 3
+  # Workload Identity
+  gsa_name               = "my-app-server"
+  ksa_name               = "app-service-account"
+  namespace              = "development"
 }
 ```
 
 ### Variable Reference
 
-| Variable                 | Description                      | Example              |
-| ------------------------ | -------------------------------- | -------------------- |
-| `project_id`             | GCP Project ID                   | `learn-2612`         |
-| `region`                 | GCP region for resources         | `europe-west3`       |
-| `location`               | Zone for zonal resources         | `europe-west3-a`     |
-| `env_name`               | Environment identifier           | `dev`, `prod`        |
-| `bucket_name`            | GCS bucket for Terraform state   | `my-tf-state-bucket` |
-| `master_ipv4_cidr_block` | CIDR for GKE control plane       | `172.16.0.0/28`      |
-| `ip_cidr_range`          | Primary CIDR for VPC subnet      | `10.0.0.0/16`        |
-| `pod_cidr_range`         | Secondary CIDR for GKE pods      | `10.10.0.0/16`       |
-| `service_cidr_range`     | Secondary CIDR for GKE services  | `10.20.0.0/20`       |
-| `node_count`             | Number of nodes in GKE node pool | `3`                  |
+| Variable                 | Description                      | Example               |
+| ------------------------ | -------------------------------- | --------------------- |
+| `project_id`             | GCP Project ID                   | `learn-2612`          |
+| `region`                 | GCP region for resources         | `europe-west3`        |
+| `location`               | Zone for zonal resources         | `europe-west3-a`      |
+| `env_name`               | Environment identifier           | `dev`, `prod`         |
+| `bucket_name`            | GCS bucket for Terraform state   | `my-tf-state-bucket`  |
+| `master_ipv4_cidr_block` | CIDR for GKE control plane       | `172.16.0.0/28`       |
+| `ip_cidr_range`          | Primary CIDR for VPC subnet      | `10.0.0.0/16`         |
+| `pod_cidr_range`         | Secondary CIDR for GKE pods      | `10.10.0.0/16`        |
+| `service_cidr_range`     | Secondary CIDR for GKE services  | `10.20.0.0/20`        |
+| `node_count`             | Number of nodes in GKE node pool | `3`                   |
+| `gsa_name`               | Google Service Account name      | `my-app-server`       |
+| `ksa_name`               | Kubernetes Service Account name  | `app-service-account` |
+| `namespace`              | Kubernetes namespace for KSA     | `development`         |
 
 ## 🌐 Network CIDR Planning
 

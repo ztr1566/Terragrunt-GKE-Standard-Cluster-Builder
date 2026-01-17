@@ -23,8 +23,8 @@ terraform {
 
 inputs = {
   project_id   = local.env_vars.locals.project_id
-  gsa_name     = "my-app-server"
-  ksa_name     = "app-service-account"
-  namespace    = "development"
+  gsa_name     = local.env_vars.locals.gsa_name
+  ksa_name     = local.env_vars.locals.ksa_name
+  namespace    = local.env_vars.locals.namespace
   cluster_name = dependency.gke.outputs.cluster_name
 }
