@@ -1,4 +1,4 @@
-# GKE Enterprise Builder
+# GKE Enterprise Builder (Terragrunt)
 
 ![Terraform](https://img.shields.io/badge/Terraform-%3E%3D1.0-623CE4?logo=terraform&logoColor=white)
 ![Terragrunt](https://img.shields.io/badge/Terragrunt-%3E%3D0.88-blue?logo=terragrunt)
